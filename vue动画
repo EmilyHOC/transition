@@ -1,0 +1,25 @@
+transition组件
+<transition name="fade">
+运动的东西
+</transition>
+
+class定义:
+.fade-enter{}//初始状态
+.fade-enter-active{}
+.fade-leave-active
+.fade-leave
+
+
+自定义过渡类名
+*enter-class
+*enter-active-class
+*leave-class
+*leave-active-class
+优先级高于普通的类名
+用法见:css过渡.html
+
+如果在某些场景中需要同时设置自两种过渡效果,就需要使用type特性设置animated或transition来声明你需要的监听的类型
+
+
+component-fade-enter-active
+component-fade-leave-active

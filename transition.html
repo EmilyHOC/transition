@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>transition过渡效果API</title>
+    <script src="vue.js"></script>
+    <link rel="stylesheet" href="animate.css">
+    <style>
+        .fade-enter-active, .fade-leave-active{
+            transition:opacity  .5s;
+        }
+        .fade-enter, .fade-leave{
+            opacity: 0;
+        }
+    </style>
+
+</head>
+<body>
+    <body>
+        <div id="demo">
+            <button @click="show=!show">Toggle</button>
+            <transition name="custom-classes-transition"
+                        enter-active-class="animated tada"
+                        leave-active-class="animated bounceOutRight">
+                <p v-if="show">hello</p>
+            </transition>
+        </div>
+    </body>
+    <script>
+        new Vue({
+            el:'#demo',
+            data:{
+                show:true
+            }
+        });
+    </script>
+</body>
+</html>
